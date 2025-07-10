@@ -34,15 +34,18 @@ Capture and Analyze Traffic with Wireshark
 
 🔍 Actions and Observations
 📷 Network Traffic Capture Example
-<p align="center"> <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Traffic Capture with Wireshark"/> </p>
+<img width="1324" height="787" alt="image" src="https://github.com/user-attachments/assets/259467ae-46c5-453a-b519-e94794005f44" />
+
 In this section, various network protocols were triggered (e.g., ICMP, HTTP) between the VMs to observe how traffic appears in Wireshark. NSG rules were modified in real-time to test access control behavior.
 
 📷 NSG Rule Adjustment and Testing
-<p align="center"> <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="NSG Rules Screenshot"/> </p>
+<img width="760" height="678" alt="image" src="https://github.com/user-attachments/assets/6e94fab2-7ef3-4f3e-a27c-20fd35231a0f" />
+
 As NSG inbound and outbound rules were updated, we validated changes by re-initiating connections (e.g., blocked SSH vs. allowed RDP). The impact was immediately visible through both failed connections and packet drops in Wireshark.
 
 📷 Final Capture and Summary
-<p align="center"> <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Final Traffic View"/> </p>
+<img width="1884" height="889" alt="image" src="https://github.com/user-attachments/assets/a3ff2b0e-36d5-4853-aedc-ec050b4396be" />
+
 A summary capture demonstrates how NSGs can effectively restrict unauthorized traffic. Logs and packet details show protocol types, source/destination IPs, ports, and behavior before/after rule changes.
 
 ✅ Summary
