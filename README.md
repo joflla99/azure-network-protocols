@@ -1,58 +1,57 @@
-# azure-network-protocols
-<p align="center">
-<img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
-</p>
+Azure Network Protocols
+<p align="center"> <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/> </p>
+Network Security Groups (NSGs) and Traffic Inspection Between Azure Virtual Machines
+This project explores how network traffic flows between Azure Virtual Machines (VMs) and how to inspect and control that traffic using Network Security Groups (NSGs) and Wireshark. It demonstrates how different protocols behave, how traffic is filtered, and how network security can be enforced in a cloud environment.
 
-<h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
-In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
+📺 Video Demonstration
+YouTube: Azure Virtual Machines, Wireshark, and Network Security Groups
+(Link will take you to a demonstration of traffic inspection and NSG configurations in real time.)
 
+🧰 Environments and Technologies Used
+Microsoft Azure – Virtual Machines / Compute
 
-<h2>Video Demonstration</h2>
+Remote Desktop Protocol (RDP)
 
-- ### [YouTube: Azure Virtual Machines, Wireshark, and Network Security Groups](https://www.youtube.com)
+Command-Line Tools – ping, tracert, curl, etc.
 
-<h2>Environments and Technologies Used</h2>
+Protocols Observed – SSH, RDP, DNS, HTTP/S, ICMP
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Various Command-Line Tools
-- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
-- Wireshark (Protocol Analyzer)
+Wireshark – Network protocol analyzer
 
-<h2>Operating Systems Used </h2>
+🖥️ Operating Systems Used
+Windows 10 (21H2)
 
-- Windows 10 (21H2)
-- Ubuntu Server 20.04
+Ubuntu Server 20.04
 
-<h2>High-Level Steps</h2>
+📝 High-Level Steps
+Deploy Azure Virtual Machines (Ubuntu & Windows)
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+Configure NSGs to Allow/Block Traffic
 
-<h2>Actions and Observations</h2>
+Use Remote Desktop to Connect and Transfer Data
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+Capture and Analyze Traffic with Wireshark
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+🔍 Actions and Observations
+📷 Network Traffic Capture Example
+<p align="center"> <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Traffic Capture with Wireshark"/> </p>
+In this section, various network protocols were triggered (e.g., ICMP, HTTP) between the VMs to observe how traffic appears in Wireshark. NSG rules were modified in real-time to test access control behavior.
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+📷 NSG Rule Adjustment and Testing
+<p align="center"> <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="NSG Rules Screenshot"/> </p>
+As NSG inbound and outbound rules were updated, we validated changes by re-initiating connections (e.g., blocked SSH vs. allowed RDP). The impact was immediately visible through both failed connections and packet drops in Wireshark.
+
+📷 Final Capture and Summary
+<p align="center"> <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Final Traffic View"/> </p>
+A summary capture demonstrates how NSGs can effectively restrict unauthorized traffic. Logs and packet details show protocol types, source/destination IPs, ports, and behavior before/after rule changes.
+
+✅ Summary
+This lab provided hands-on experience with:
+
+Deploying and connecting Azure VMs across platforms
+
+Capturing network traffic to understand protocol behavior
+
+Modifying NSGs to control traffic flow and security
+
+Using Wireshark for deep traffic inspection and validation
